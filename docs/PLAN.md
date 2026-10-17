@@ -12,7 +12,8 @@
 | Expo online project (`fharmels-team/expenseflow`) | ✅ Done |
 | API skeleton: solution, 4 projects, 2 test projects, references | ✅ Done (builds and runs) |
 | PostgreSQL container `expenseflow-db` | ⏳ Waiting on the Docker update |
-| Domain entities (Step 2b) | ⏳ Shown, waiting for OK |
+| Domain entities + unit tests (Phase 1) | ✅ Done (35 tests) |
+| Git repo on GitHub | ✅ Done |
 
 ## 2. Phases
 
@@ -159,13 +160,14 @@ Each phase ends with a **checkpoint** you can verify yourself. The time estimate
 - **Checkpoint:** the end-to-end check passes against Azure, from the Samsung and the browser.
 
 ### Phase 12 – Azure DevOps CI/CD (≈1 h)
+- The code lives on **GitHub**. In Azure DevOps, create a project and a **GitHub service connection**, then create each pipeline from its YAML file in the GitHub repo.
 - `pipelines/api.yml`, `pipelines/notifications.yml` and `pipelines/web.yml`, each with path filters and Build → Deploy stages.
 - **Pipeline contents:**
   - the **API** pipeline runs `dotnet test` and generates an idempotent migration script;
   - the **Node** pipeline runs `npm test`;
   - the **web** pipeline runs lint and the web export.
 - **Secrets** live in a variable group linked to Key Vault. Optionally, an EAS build step uses an Expo token stored as a secret.
-- **Checkpoint:** a push to `main` builds and deploys automatically. You push and commit yourself.
+- **Checkpoint:** a push to `main` on GitHub builds and deploys automatically. You push and commit yourself.
 
 ### Phase 13 – Final verification and demo prep (≈30 min)
 - `/verify`: every check PASSED, and every testable rule covered.

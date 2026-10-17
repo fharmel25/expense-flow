@@ -56,7 +56,7 @@ ExpenseFlow/
 | Notifications | **Node.js** (LTS), TypeScript, Express, expo-server-sdk → Expo Push API → FCM (Android) / APNs (iOS) |
 | Files | **Azure Blob Storage** (private container, SAS URLs); **Azurite** locally |
 | Cloud | Azure App Service (API + Node), Azure Database for PostgreSQL Flexible Server, Azure Static Web Apps (web build), Key Vault, Application Insights |
-| CI/CD | **Azure DevOps** (Repos, YAML pipelines, variable groups), **EAS Build** for mobile |
+| Source / CI/CD | Code on **GitHub**; **Azure DevOps** Azure Pipelines (YAML, variable groups) connected to the GitHub repo; **EAS Build** for mobile |
 
 ### Development environment
 
