@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+
+      "Bash(npm install)",
+      "Bash(npm run:*)"
+    ],
+    "ask": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(**/.env)",
+      "Read(**/.env.local)",
+      "Read(**/.env.*.local)",
+
+      "Bash(git push:*)",
+
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(del:*)",
+      "Bash(erase:*)",
+      "Bash(rd:*)",
+      "Bash(Remove-Item:*)",
+      "Bash(git rm:*)",
+      "Bash(git clean:*)"
+    ]
+  }
+}

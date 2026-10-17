@@ -1,0 +1,30 @@
+# .NET build output and IDE files
+bin/
+obj/
+.vs/
+*.user
+
+# Node / Expo
+node_modules/
+dist/
+.expo/
+web-build/
+
+# Secrets (.env.example is still committed, because this pattern only matches ".env" exactly)
+.env
+.env.local
+
+# Azurite local storage data
+.azurite/
+
+# Signing keys / credentials
+*.jks
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
+*service-account*.json
+
+# OS
+Thumbs.db
+.DS_Store
