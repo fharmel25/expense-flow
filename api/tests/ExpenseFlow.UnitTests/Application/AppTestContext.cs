@@ -34,6 +34,8 @@ public sealed class AppTestContext : IDisposable
     public IReceiptStorage Receipts { get; } = Substitute.For<IReceiptStorage>();
     public IWorkflowService Workflows { get; } = Substitute.For<IWorkflowService>();
     public INotificationClient Notifications { get; } = Substitute.For<INotificationClient>();
+    public IPasswordHasher Hasher { get; } = Substitute.For<IPasswordHasher>();
+    public ITokenService Tokens { get; } = Substitute.For<ITokenService>();
 
     public User Manager { get; }
     public User Employee { get; }

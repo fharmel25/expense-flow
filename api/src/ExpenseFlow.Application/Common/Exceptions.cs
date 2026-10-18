@@ -6,6 +6,12 @@ public class NotFoundException : Exception
     public NotFoundException(string entity, object key) : base($"{entity} '{key}' was not found.") { }
 }
 
+/// <summary>Mapped to HTTP 401.</summary>
+public class UnauthorizedException : Exception
+{
+    public UnauthorizedException(string message) : base(message) { }
+}
+
 /// <summary>Mapped to HTTP 403.</summary>
 public class ForbiddenException : Exception
 {
