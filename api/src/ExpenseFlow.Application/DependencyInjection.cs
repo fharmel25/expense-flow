@@ -1,4 +1,5 @@
 using ExpenseFlow.Application.Common;
+using ExpenseFlow.Application.Features.Expenses;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +17,7 @@ public static class DependencyInjection
             cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
         services.AddValidatorsFromAssembly(assembly);
+        services.AddScoped<ApprovalSteps>();
 
         return services;
     }
